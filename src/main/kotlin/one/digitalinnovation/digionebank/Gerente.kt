@@ -4,7 +4,9 @@ class Gerente(
     nome: String,
     cpf:String,
     salario: Double,
-    cargo: String
-):Funcionario(nome=nome,cpf=cpf,cargo=cargo,salario=salario) {
-    override fun calculoSalario(): Double = salario * 0.4
+    cargo: String,
+    val senha :String
+):Funcionario(nome=nome,cpf=cpf,cargo=cargo,salario=salario), Log {
+    override fun calculoSalario(): Double = salario + salario * 0.4
+    override fun login(): Boolean = "123" == senha
 }

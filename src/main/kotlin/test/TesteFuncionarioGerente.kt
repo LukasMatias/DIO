@@ -1,14 +1,15 @@
 package test
 
-import one.digitalinnovation.digionebank.Analista
-import one.digitalinnovation.digionebank.Funcionario
+import one.digitalinnovation.digionebank.Gerente
 
 fun main() {
-    val pedro = Analista(
+    val pedro = Gerente(
         "Pedro",
         "12345689",
+        2000.00,
         "Gerente",
-        2000.00)
+        "1234")
     ImprimeRelatorioFuncionario.imprimir(pedro)
+    TesteAuth().testeAutenticacao(pedro)
 }
 
